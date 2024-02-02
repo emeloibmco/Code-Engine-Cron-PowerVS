@@ -5,14 +5,30 @@ _Este repositorio contiene los archivos necesarios para generar una aplicación 
 
 
 
+## Índice
+1. [Prerrequisitos](#prerrequisitos)
+2. [Procedimiento](#procedimiento)
+   - [Crear llave ssh para Github](#crear-llave-ssh-para-github)
+   - [Crear token de acceso de Dockerhub](#crear-token-de-acceso-de-dockerhub)
+   - [Crear repositorio en Github](#crear-repositorio-en-github)
+   - [Crear aplicación en Code Engine](#crear-aplicación-en-code-engine)
+   - [Crear suscripción por eventos de Cron](#crear-suscripción-por-eventos-de-cron)
+3. [Referencias](#referencias)
+
+
+
+
+
+
+
 
 
 ## Prerrequisitos
- - Tener una cuenta en [IBM Cloud](https://cloud.ibm.com/) con un grupo de recursos disponible (puede ser el _Default_).
- - Una api key para la cuenta de IBM Cloud.
- - Un espacio de trabajo de Power en IBM Cloud con un VSI.
- - Tener una cuenta de [Docker Hub](https://hub.docker.com/) o cualquier servicio en línea que proporcione un registro de contenedores para la plataforma Docker.
- - Tener una cuenta de [Github](https://github.com).
+1. Tener una cuenta en [IBM Cloud](https://cloud.ibm.com/) con un grupo de recursos disponible (puede ser el _Default_).
+2. Una api key para la cuenta de IBM Cloud.
+3. Un espacio de trabajo de Power en IBM Cloud con una instancia de VSI.
+4. Tener una cuenta en [Docker Hub](https://hub.docker.com/) o cualquier servicio en línea que proporcione un registro de contenedores para la plataforma Docker.
+5. Tener una cuenta de [GitHub](https://github.com).
 
 
 
@@ -77,7 +93,7 @@ Reemplazar ```NOMBRE_LLAVE``` por el nombre que le hayamos colocado a la llave s
 
 
 
-### Creación token de acceso de Dockerhub
+### Crear token de acceso de Dockerhub
 Acceda a su cuenta de Dockerhub y dé click en su foto de perfil arriba a la derecha **My Account** > **Security** > **New Access Token** y llene los valores de la siguiente manera:
  - **Access Token Description**: Un nombre para identificar el token de acceso a crear.
  - **Access permissions**: Seleccione "Read, Write, Delete".
@@ -184,12 +200,14 @@ Con esto ya queda programado el escalamiento de la aplicación en los horarios d
 
 
 
-# Referencias
- - https://github.com/IBM/CodeEngine/tree/main/bash
- - https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-put
- - https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
- - https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
- - https://crontab.cronhub.io/
+## Referencias
+
+- [IBM Code Engine Bash Scripts](https://github.com/IBM/CodeEngine/tree/main/bash)
+- [IBM Power Cloud API Documentation](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-put)
+- [GitHub SSH Key Generation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- [GitHub SSH Key Addition](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+- [Cron Expression Generator](https://crontab.cronhub.io/)
+
 
 
 
